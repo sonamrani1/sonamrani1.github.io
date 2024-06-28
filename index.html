@@ -13,9 +13,14 @@
     </style>
 
 
+
+
 </head>
 
 <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
     <div class="main-title">
         <div class="logo">
             <img src="ganpati-logo.jpg" alt="">
@@ -28,11 +33,11 @@
     <!-- HEADER DESIGH -->
 
     <header class="header">
-        <a href="#"class="logo">Logo</a>
+        <a href="#" class="logo">Logo</a>
         <i class="fa-solid fa-bars" id="menu-icon"></i>
-        
+
         <nav class="navbar">
-           
+
             <ul>
                 <li><a href="#home" class="active">HOME</a></li>
                 <li><a href="#services">SERVICES</a>
@@ -67,9 +72,29 @@
                 </li>
 
                 <li><a href="#contact">CONTACT US</a></li>
-                <li><a href="#donation">DONATION</a></li>
-                <li><a href="#about">ABOUT US</a></li>
-                <li><a href="index1.html" target="_self">LOG IN</a></li>
+
+                <li><a href="#about-content">ABOUT US</a></li>
+                <!-- <li><a href="index1.html" target="_self">LOG IN</a></li> -->
+                 <li><button class="open-button" onclick="openForm()">LOG IN</button></li>
+
+                 <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <h1>Login</h1>
+                  
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+                  
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                      <button type="submit" class="btn">Login</button>
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+              
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ORqAc7AKY3jHRi" async> </script> </form>
+
+
             </ul>
 
         </nav>
@@ -79,7 +104,7 @@
 
     <!-- home screen -->
     <section class="home" id="home">
-        
+
         <div class="slides" style="max-width:100%">
             <img class="mySlides" src="cont1.jpg" style="width:100%" height="500px">
             <img class="mySlides" src="cont2.jpg" style="width:100%" height="500px">
@@ -116,6 +141,7 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore incidunt consectetur suscipit.
                     Doloremque, soluta hic architecto impedit nesciunt velit aliquid, qui illo eligendi facere vel
                     minima, sit quos doloribus minus.
+
                 </p>
                 <a href="#" class="btn">Read more...</a>
             </div>
@@ -155,17 +181,47 @@
 
         <div class="portfolio-container">
             <div class="portfolio-box">
-                <img src="pro1.jpg" alt="">
+                <img src="road.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>Build pipeline</h4>
-                    <p>tium amet labore recusandae perferendis officia maiores, quasi magni iste quo autem facere ipsum
-                        alias, provident vel soluta<a href="#" class="btn">Read more...</a></p>
+                    <p>tium amet labore recusandae perferendis officia maiores, quasi magni iste quo autem facere ipsumalias, provident vel soluta</p>
+
+                        <button id="btn" class="btn">Read More</button>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2>More Information</h2>
+            <p> We offer an extensive range of products designed to meet the rigorous demands of road construction. From foundational materials to advanced technologies, our products ensure long-lasting, safe, and efficient roadways.<br><br><br>
+                Featured Road Construction Products:<br>
+
+                1. Asphalt Mixes<br><br>
+                   - Description:Our premium asphalt mixes are engineered for superior performance under heavy traffic and varying weather conditions. Ideal for highways, city streets, and rural roads.<br>
+                   - Key Benefits:
+                     - Exceptional durability and resistance to cracking
+                     - Smooth, safe driving surface with enhanced skid resistance
+                     - Fast curing times to minimize construction downtime<br><br>
+                
+                2. Concrete Paving<br><br>
+
+                   - Description: High-strength concrete solutions for durable road surfaces, curbs, and sidewalks. Perfect for areas requiring robust and low-maintenance pavement.<br>
+                   - Key Benefits:
+                     - Long-lasting with high compressive strength
+                     - Excellent wear resistance and minimal upkeep
+                     - Eco-friendly options with reduced carbon footprint<br>
+                
+            </p>
+        </div>
+    </div>
+
+
 
                 </div>
             </div>
 
             <div class="portfolio-box">
-                <img src="pro1.jpg" alt="">
+                <img src="hardware.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>construction contract</h4>
                     <p>epellendus accusantium amet labore recusandae perferendis officia maiores, quasi magni iste quo
@@ -195,7 +251,7 @@
             </div>
 
             <div class="portfolio-box">
-                <img src="pro1.jpg" alt="">
+                <img src="electric.jpg" alt="">
                 <div class="portfolio-layer">
                     <h4>home</h4>
                     <p> accusantium amet labore recusandae perferendis officia maiores, quasi magni iste quo autem
@@ -221,7 +277,7 @@
 
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Us</span></h2>
-        <div class="form-container">
+        <div class="form-container2">
             <form action="https://formsubmit.co/sonamrani543@gmail.com" method="post">
                 <div class="input-box">
                     <input type="text" placeholder="first Name"></label>
@@ -253,14 +309,42 @@
 
 
     <!-- about us section -->
-    <div class="about-content">
+    <div class="about-content" id="about-content">
         <h2 class="heading">ABOUT <span>Me</span></h2>
-        <h3>Frontend Developer</h3>
+        
 
-        <p>Passionate about creating web pages but i didn't create any of now.So, i don't know whetherlorem
-            fgtuioiu hoiuop odjfoso nikjdoisjdo dhdihdoiwjdoi sjfdjdishjdijs nhkfsdhikfhsdikfhskfdhikshdk
-            hfkshfshfdkhsdkfhsdk bhsdfh bfjshfdjshffhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh my clients are
-            happy about it or not('-')
+        <h4>Building Dreams, Creating Legacies</h4>
+
+        <p> Welcome to [Company Name], where craftsmanship meets commitment. Founded in [Year], we have established
+            ourselves as a trusted leader in the construction industry. Our journey began with a simple mission: to
+            build exceptional spaces that stand the test of time and enrich the lives of those who inhabit them.</p>
+
+        <h4> Who We Are</h4>
+
+        <p> At [Company Name], we are more than just builders. We are a dedicated team of architects, engineers, project
+            managers, and skilled tradespeople driven by a shared passion for excellence. Our diverse backgrounds and
+            extensive experience allow us to approach every project with a fresh perspective and a keen eye for detail.
+        </p>
+
+        <h4>What We Do</h4>
+
+        <p> We specialize in a wide range of construction services, including:<br>
+
+            - Residential Construction: Crafting custom homes and residential developments that combine beauty and
+            functionality.<br>
+            - Commercial Construction: Developing innovative commercial spaces that support business growth and
+            success.<br>
+            - Renovation & Remodeling: Transforming existing structures into modern, efficient, and aesthetically
+            pleasing spaces.<br>
+            - Infrastructure Projects: Building critical infrastructure that enhances community connectivity and
+            quality of life.</p><br>
+
+        <h4>Our Philosophy</h4>
+
+        <p> Our work is guided by a commitment to quality, integrity, and sustainability. We believe in building
+            responsibly, with a focus on using environmentally friendly materials and practices. <br>Our projects are not
+            just about constructing buildings; they are about creating environments that inspire and endure.
+
         </p>
 
     </div>
@@ -269,12 +353,20 @@
     </div>
 
     <!-- footer section -->
-    <div class="footer">
-        @Copyright <a href="https://www.javatpoint.com/"> JavaTpoint </a> 2020- All Right Reserved.
+     <footer class="footer">
+    <div class="footer-text">
+        @Copyright <a href="#"> sonamrani </a> 2020- All Right Reserved.
     </div>
+    <div class="footer-iconTop">
+        <a href="#home" > <i class="fa-solid fa-angle-up"></i></a>
+    </div>
+</footer>
+
 
 
     <script src="script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 </body>
 
 </html>
