@@ -1,0 +1,57 @@
+html {
+    font-family: sans-serif;
+  }
+  
+  div:first-of-type {
+    display: grid;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  label {
+    margin-left: 35px;
+    line-height: 25px;
+  }
+  
+  input {
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  
+    border: 2px solid black;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 21px;
+  }
+  
+  input:checked {
+    border: 7px solid rgb(48, 138, 173);
+  }
+  
+  button,
+  legend {
+    color: white;
+    background-color: rgb(36, 151, 74);
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 20px;
+    text-align: center;
+
+    
+  }
+  
+  button:hover,
+  button:focus {
+    background-color: #0d6597;
+  }
+  
+  button:active {
+    background-color: white;
+    color: black;
+    outline: 1px solid black;
+  }

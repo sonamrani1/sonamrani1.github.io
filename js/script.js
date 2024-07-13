@@ -15,15 +15,6 @@ function carousel() {
 
 
 
-/*=============toggle icon navbar===============*/
-
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
-
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle('fa-xmark');
-  navbar.classList.toggle('active');
-}
 
 
 
@@ -193,8 +184,6 @@ function topFunction() {
 
 
 
-
-
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -202,3 +191,8 @@ function openForm() {
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
 }
+
+
+
+
+
