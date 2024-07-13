@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: pink;
+    color: black;
+}
+
+section {
+    min-height: 80vh;
+    padding: 2rem 5% 2rem;
+}
+
+h1 {
+
+    font-size: 5rem;
+    padding-left: 20px;
+}
+
+
+
+.main-title {
+
+    display: flex;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    height: 13rem;
+    width: 100%;
+    background-color: #627254;
+    position: fixed;
+    z-index: 1000;
+    box-shadow:0 0px 20px;
+}
+
+.title-text {
+    flex: 60%;
+    padding: 1rem;
+    text-align: left;
+}
+
+.logo {
+    flex: 40%;
+    justify-content: left;
+    align-items: left;
+
+}
+
+.logo img {
+    border-radius: 50%;
+    height:100px;
+    width:100px;
+    margin:8px;
+   
+}
+
+.heading {
+    text-align: center;
+    font-size: 5rem;
+    color: black;
+ 
+}
+
+.pro-body h2 {
+    margin-top: 20rem;
+
+}
+
+.pro-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.pro-container , .pro-box {
+    flex: 1 1 60rem;
+    background: rgb(221, 236, 231);
+    padding: 3rem 2rem 10rem;
+    margin:6rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.pro-container,
+.pro-box:hover {
+    border-color: white;
+    transform: scale(1.02);
+    box-shadow: 0 0 5px #33ffff, 0 0 5px #232626;
+
+}
+
+.pro-box{
+    background-color: rgb(192, 134, 134);
+}
+
+
+
+.pro-box h3 {
+    font-size: 3rem;
+    color: rgb(41, 36, 36);
+}
+
+.pro-box p {
+    color: rgb(47, 31, 31);
+    font-size: 2rem;
+    /* margin: 1rem 0 3rem; */
+
+
+}

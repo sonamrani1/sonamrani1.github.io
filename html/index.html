@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contractor</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .mySlides {
+            display: none;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <div class="main-title">
+        <div class="logo">
+            <img src="../img/main/ganpati-logo.jpg" alt="">
+        </div>
+        <div class="title-text">
+            <h1>Rajnish Company Ltd</h1>
+        </div>
+
+    </div>
+    <!-- HEADER DESIGH -->
+
+    <header class="header">
+        <a href="#" class="logo">Logo</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+
+            <ul>
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#services">SERVICES</a>
+                    <div class="pro-drop" id="pro-drop">
+                        <ul>
+                            <li><a href="#">Road Construction</a></li>
+                            <li><a href="#">Plumbing</a></li>
+                            <li><a href="#">Interior Design</a></li>
+                            <li><a href="#">Furniture</a></li>
+                            <li><a href="#">Electrification</a></li>
+                            <li><a href="#">Exterior Work</a></li>
+                            <li><a href="#">Social Services</a></li>
+                            <li><a href="#">Painting</a></li>
+                            <li><a href="#">Hardware</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="product.html" target="_self">PRODUCTS</a>
+                    <div class="pro-drop">
+                        <ul>
+                            <li><a href="#">Electrial Material</a></li>
+                            <li><a href="#">Hardware</a></li>
+                            <li><a href="#">Bathroom & Pipeline</a></li>
+                            <li><a href="#">Contrete</a></li>
+                            <li><a href="#">Steel</a></li>
+                            <li><a href="#">Sand</a></li>
+                            <li><a href="#">Cement</a></li>
+                            <li><a href="#">Machinery for Construction & Maintenance</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li><a href="#contact">CONTACT US</a></li>
+
+                <li><a href="#about-content">ABOUT US</a></li>
+                <!-- <li><a href="index1.html" target="_self">LOG IN</a></li> -->
+                 <li><button class="open-button" onclick="openForm()">LOG IN</button></li>
+
+                 <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                      <h1>Login</h1>
+                  
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+                  
+                      <label for="psw"><b>Password</b></label>
+                      <input type="password" placeholder="Enter Password" name="psw" required>
+                  
+                      <button type="submit" class="btn">Login</button>
+                      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                  </div>
+              
+                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ORqAc7AKY3jHRi" async> </script> </form>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- home screen -->
+    <section class="home" id="home">
+
+        <div class="slides" style="max-width:100%">
+            <img class="mySlides" src="../img/main/cont1.jpg" style="width:100%" height="500px">
+            <img class="mySlides" src="../img/main/cont2.jpg" style="width:100%" height="500px">
+            <img class="mySlides" src="../img/main/cont3.jpg" style="width:100%" height="500px">
+            <img class="mySlides" src="../img/main/cont4.jpg" style="width:100%" height="500px">
+            <img class="mySlides" src="../img/main/cont5.jpg" style="width:100%" height="500px">
+            <div class="update">
+                <h2>LATEST UPDATES</h2>
+                <p>1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis, cupiditate ex quam magnam
+                    odio accusantium. Nesciunt, minus nihil. Autem blanditiis porro, consequuntur vero ea eveniet sed
+                    laborum eaque pariatur.</p>
+                <p>2.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque deserunt laudantium perferendis
+                    quas maiores cum, voluptas, eos consectetur ut incidunt sunt iusto voluptatem, in est non
+                    dignissimos autem iste asperiores.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- service section -->
+
+    <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+
+        <div class="services-container">
+            <div class="services-box">
+
+                <h3>Construction</h3>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam animi libero hic obcaecati quis
+                    excepturi tenetur labore saepe! Cumque dicta rerum reiciendis quam vitae quisquam alias nihil
+                    eveniet delectus tempora!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore incidunt consectetur suscipit.
+                    Doloremque, soluta hic architecto impedit nesciunt velit aliquid, qui illo eligendi facere vel
+                    minima, sit quos doloribus minus.
+
+                </p>
+                <a href="#" class="btn">Read more...</a>
+            </div>
+            <div class="services-box">
+
+                <h3>Nal Jal yojana</h3>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam animi libero hic obcaecati quis
+                    excepturi tenetur labore saepe! Cumque dicta rerum reiciendis quam vitae quisquam alias nihil
+                    eveniet delectus tempora!
+
+                </p>
+                <a href="#" class="btn">Read more...</a>
+            </div>
+
+            <div class="services-box">
+
+                <h3>Road Construction</h3>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam animi libero hic obcaecati quis
+                    excepturi tenetur labore saepe! Cumque dicta rerum reiciendis quam vitae quisquam alias nihil
+                    eveniet delectus tempora!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore incidunt consectetur suscipit.
+                    Doloremque, soluta hic architecto impedit nesciunt velit aliquid, qui illo eligendi facere vel
+                    minima, sit quos doloribus minus.
+                </p>
+                <a href="#" class="btn">Read more...</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- products section -->
+
+    <section class="products" id="products">
+        <h2 class="heading">Latest <span>Products</span></h2>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="../img/main/road.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Build pipeline</h4>
+                    <p>tium amet labore recusandae perferendis officia maiores, quasi magni iste quo autem facere ipsumalias, provident vel soluta</p>
+
+                        <button id="btn" class="btn">Read More</button>
+
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2>More Information</h2>
+            <p> We offer an extensive range of products designed to meet the rigorous demands of road construction. From foundational materials to advanced technologies, our products ensure long-lasting, safe, and efficient roadways.<br><br><br>
+                Featured Road Construction Products:<br>
+
+                1. Asphalt Mixes<br><br>
+                   - Description:Our premium asphalt mixes are engineered for superior performance under heavy traffic and varying weather conditions. Ideal for highways, city streets, and rural roads.<br>
+                   - Key Benefits:
+                     - Exceptional durability and resistance to cracking
+                     - Smooth, safe driving surface with enhanced skid resistance
+                     - Fast curing times to minimize construction downtime<br><br>
+                
+                2. Concrete Paving<br><br>
+
+                   - Description: High-strength concrete solutions for durable road surfaces, curbs, and sidewalks. Perfect for areas requiring robust and low-maintenance pavement.<br>
+                   - Key Benefits:
+                     - Long-lasting with high compressive strength
+                     - Excellent wear resistance and minimal upkeep
+                     - Eco-friendly options with reduced carbon footprint<br>
+                
+            </p>
+        </div>
+    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="../img/main/hardware.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>construction contract</h4>
+                    <p>epellendus accusantium amet labore recusandae perferendis officia maiores, quasi magni iste quo
+                        autem facere </p>
+                    <a href="#" class="btn">Read more...</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="../img/main/pro1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4> Design</h4>
+                    <p> recusandae perferendis officia maiores, quasi magni iste quo autem facere ipsum alias, provident
+                        vel soluta.</p>
+                    <a href="#" class="btn">Read more...</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="../img/main/pro1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>House</h4>
+                    <p>m amet labore recusandae perferendis officia maiores, quasi magni iste quo autem facere ipsum
+                        alias, provident vel soluta.</p>
+                    <a href="#" class="btn">Read more...</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="../img/main/electric.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>home</h4>
+                    <p> accusantium amet labore recusandae perferendis officia maiores, quasi magni iste quo autem
+                        facere ipsum alias, provident vel soluta.</p>
+                    <a href="#" class="btn">Read more...</a>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="../img/main/pro1.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>road</h4>
+                    <p>maiores, quasi magni iste quo autem facere ipsum alias, provident vel soluta.</p>
+                    <a href="#" class="btn">Read more...</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- contact section -->
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Us</span></h2>
+        <div class="form-container2">
+            <form action="https://formsubmit.co/sonamrani543@gmail.com" method="post">
+                <div class="input-box">
+                    <input type="text" placeholder="first Name"></label>
+
+                    <input type="text" placeholder="last Name"></label>
+
+                    <input type="email" placeholder="Email Address"></label>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="15" placeholder="Your Message"></textarea>
+                <input type="submit" value="sumit" class="btn">
+
+            </form>
+        </div>
+        <div class="map">
+            <h4>ADDRESS</h4>
+            <p>Vill-rasalpur<br>
+                jandaha<br>vaishali<br>bihar<br>pincode-844505<br>email-bhjbjbj@gmail.com<br>Mobileno-5565656565</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8845.417647141243!2d85.507182!3d25.72665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed7bd58131155b%3A0xda3aca54f9d802fb!2sJoint%20family%20house!5e1!3m2!1sen!2sin!4v1718872831724!5m2!1sen!2sin"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+
+
+    <!-- about us section -->
+    <div class="about-content" id="about-content">
+        <h2 class="heading">ABOUT <span>Me</span></h2>
+        
+
+        <h4>Building Dreams, Creating Legacies</h4>
+
+        <p> Welcome to [Company Name], where craftsmanship meets commitment. Founded in [Year], we have established
+            ourselves as a trusted leader in the construction industry. Our journey began with a simple mission: to
+            build exceptional spaces that stand the test of time and enrich the lives of those who inhabit them.</p>
+
+        <h4> Who We Are</h4>
+
+        <p> At [Company Name], we are more than just builders. We are a dedicated team of architects, engineers, project
+            managers, and skilled tradespeople driven by a shared passion for excellence. Our diverse backgrounds and
+            extensive experience allow us to approach every project with a fresh perspective and a keen eye for detail.
+        </p>
+
+        <h4>What We Do</h4>
+
+        <p> We specialize in a wide range of construction services, including:<br>
+
+            - Residential Construction: Crafting custom homes and residential developments that combine beauty and
+            functionality.<br>
+            - Commercial Construction: Developing innovative commercial spaces that support business growth and
+            success.<br>
+            - Renovation & Remodeling: Transforming existing structures into modern, efficient, and aesthetically
+            pleasing spaces.<br>
+            - Infrastructure Projects: Building critical infrastructure that enhances community connectivity and
+            quality of life.</p><br>
+
+        <h4>Our Philosophy</h4>
+
+        <p> Our work is guided by a commitment to quality, integrity, and sustainability. We believe in building
+            responsibly, with a focus on using environmentally friendly materials and practices. <br>Our projects are not
+            just about constructing buildings; they are about creating environments that inspire and endure.
+
+        </p>
+
+    </div>
+
+
+    </div>
+
+    <!-- footer section -->
+     <footer class="footer">
+    <div class="footer-text">
+        @Copyright <a href="#"> sonamrani </a> 2020- All Right Reserved.
+    </div>
+    <div class="footer-iconTop">
+        <a href="#home" > <i class="fa-solid fa-angle-up"></i></a>
+    </div>
+</footer>
+
+
+
+    <script src="../js/script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+</body>
+
+</html>
