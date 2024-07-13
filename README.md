@@ -1,0 +1,3 @@
+This is a Sample Construction Company Project build on HTML, CSS, JAVA-SCRIPT.
+
+Build for learning purpose.  Enhancement is still going on...
