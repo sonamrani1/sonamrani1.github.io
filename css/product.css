@@ -81,7 +81,7 @@ body {
 .product-area {
     margin-top: 13rem;
     height: 50vh;
-    background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("producthome.jpg");
+    background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../img/product/producthome.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
