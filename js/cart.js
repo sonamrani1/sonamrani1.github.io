@@ -97,10 +97,11 @@ const addtocard = (key) => {
 
 const reloadcard = () => {
     listcard.innerHTML = "";
-    let count = 0;
+   
     let totalprice = 0;
 
     listcards.forEach((value, key) => {
+        let count = 0;
         totalprice = totalprice + value.price;
         count = count + value.quantity;
 
@@ -128,13 +129,13 @@ const reloadcard = () => {
     })
 }
 
-const changequantity = (key , quantity) => {
-    if(quantity==0){
+const changequantity = (key , item_quantity) => {
+    if(item_quantity==0){
         delete listcards[key]
     }
     else{
-        listcards[key].quantity = quantity;
-        listcards[key].price = quantity * products[key].price
+        listcards[key].quantity = item_quantity;
+        listcards[key].price = item_quantity * products[key].price
     }
 
     reloadcard()

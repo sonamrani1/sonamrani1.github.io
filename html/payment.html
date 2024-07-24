@@ -7,24 +7,32 @@
     <link rel="stylesheet" href="../css/payment.css">
 </head>
 <body>
-    <form>
+    <form id="paymentForm">
         <fieldset>
           <legend>Please select your preferred payment method:</legend>
           <div>
-            <input type="radio" id="contactChoice1"  name="contact" value="email" checked />
-            <label for="contactChoice1">PayTm</label>
+            <input type="radio" name="payment" value="PayTm" data-url="https://paytm.com/">
+            <label>PayTm</label>
       
-            <input type="radio" id="contactChoice2" name="contact" value="phone" />
-            <label for="contactChoice2">Airpay</label>
+            <input type="radio" name="payment" value="Airpay" data-url="https://airpay.co.in/" >
+            <label>Airpay</label>
       
-            <input type="radio" id="contactChoice3" name="contact" value="mail" />
-            <label for="contactChoice3">Razorpay</label>
+            <input type="radio" name="payment" value="Razorpay" data-url="https://razorpay.com/">
+            <label>Razorpay</label>
           </div>
+          <!-- <p>Total Amount: $<span id="payment-total"></span></p> -->
+          <!-- <input type="hidden" id="totalamount" name="totalamount" value="0.00"> -->
+          <p class="total">Total Price: <span id="totalprice">0</span></p>
+
+
           <div>
             <button type="submit">Proceed to Pay</button>
           </div>
+        
         </fieldset>
       </form>
-    
+      <script src="../js/payment.js"></script>
+      <script src="../js/cart.js"></script>
+
 </body>
 </html>

@@ -33,16 +33,16 @@
         </div>
 
     </div>
-    <!-- HEADER DESIGH -->
+    <!---------------------------------- HEADER DESIGH ----------------------------------------->
 
     <header class="header">
         <input type="checkbox" id="check" name="" value="">
         <label for="check" id="checkbtn"><i class="fa-solid fa-bars"></i></label>
-        <label class="nav-logo">RCLTD</label>
+        <label class="nav-logo">RSE</label>
         <nav class="navbar">
             <ul>
                 <li><a href="#home" class="active">HOME</a></li>
-                <li><a href="#services" target="_self">SERVICES <i class="fa-solid fa-angle-down"></i></a>
+                <li><a href="#services" class="smooth-scroll" target="_self">SERVICES <i class="fa-solid fa-angle-down"></i></a>
                     <div class="pro-drop">
                         <ul>
                             <li><a href="./html/service.html">Road Construction</a></li>
@@ -57,7 +57,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="#products" target="_self">PRODUCTS <i class="fa-solid fa-angle-down"></i></a>
+                <li><a href="#products" class="smooth-scroll" target="_self">PRODUCTS <i class="fa-solid fa-angle-down"></i></a>
                     <div class="pro-drop">
                         <ul>
                             <li><a href="./html/product.html">Electrial Material</a></li>
@@ -73,44 +73,40 @@
                     </div>
                 </li>
 
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#about-content" class="smooth-scroll">ABOUT US</a></li>
+                <li><a href="#contact" class="smooth-scroll">CONTACT</a></li>
 
-                <li><a href="#about-content">ABOUT US</a></li>
                 <!-- <li><a href="index1.html" target="_self">LOG IN</a></li> -->
 
                 <li><button class="login-button" onclick="openForm()">LOG IN</button></li>
 
-                    <div class="login-popup" id="myForm">
-                        <form action="/action_page.php" class="form-container">
-                            <h1>Login</h1>
+                <div class="login-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <h1>Login</h1>
 
-                            <label for="email"><b>Email</b></label>
-                            <input type="text" placeholder="Enter Email" name="email" required>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
 
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
-                            <div class="forgot-btn"><a href="#">Forget Password</a></div>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" id="myInput" required>
+                        /* An element to toggle between password visibility */
+                        <input type="checkbox" onclick="myFunction()">Show Password
 
-                            <button type="submit" class="btn">Login</button>
-                            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-                            <div class="login-register">
-                                <p>Don't have an account?<a href="./html/registerpage.html" class="register-link">Register</a>
-                                </p>
-                            </div>
-                        </form>
-                        
-                    </div>
-               
+                        <div class="forgot-btn"><a href="#">Forget Password</a></div>
+
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                        <div class="login-register">
+                            <p>Don't have an account?<a href="./html/registerpage.html"
+                                    class="register-link">Register</a>
+                            </p>
+                        </div>
+                    </form>
+
+                </div>
+
                 <li><a href="./html/payment.html" target="_self"> PAY NOW</a></li>
                 <li><a href="./html/cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
-
-
-
-                <!-- <form>
-                    <script src="https://checkout.razorpay.com/v1/payment-button.js"
-                        data-payment_button_id="pl_ORqAc7AKY3jHRi" async> </script>
-                </form> -->
-
 
             </ul>
 
@@ -119,7 +115,7 @@
     </header>
 
 
-    <!-- home screen -->
+    <!---------------------------- home screen -------------------------------->
     <section class="home" id="home">
 
         <div class="slides" style="max-width:100%">
@@ -130,18 +126,15 @@
             <img class="mySlides" src="./img/main/cont5.jpg" style="width:100%" height="500px">
             <div class="update">
                 <h2>LATEST UPDATES</h2>
-                <p>1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum debitis, cupiditate ex quam magnam
-                    odio accusantium. Nesciunt, minus nihil. Autem blanditiis porro, consequuntur vero ea eveniet sed
-                    laborum eaque pariatur.</p>
-                <p>2.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque deserunt laudantium perferendis
-                    quas maiores cum, voluptas, eos consectetur ut incidunt sunt iusto voluptatem, in est non
-                    dignissimos autem iste asperiores.hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</p>
+                <p>No updates till now</p>
+
+
             </div>
         </div>
     </section>
 
 
-    <!-- service section -->
+    <!--------------------------- service section ------------------------------->
 
     <section class="services" id="services">
         <h2 class="heading">Our <span>Services</span></h2>
@@ -150,25 +143,25 @@
         <div class="services-container">
             <div class="services-box">
 
-                <h3>Construction</h3>
+                <h3>Residential Construction
+                </h3>
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam animi libero hic obcaecati quis
-                    excepturi tenetur labore saepe! Cumque dicta rerum reiciendis quam vitae quisquam alias nihil
-                    eveniet delectus tempora!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore incidunt consectetur suscipit.
-                    Doloremque, soluta hic architecto impedit nesciunt velit aliquid, qui illo eligendi facere vel
-                    minima, sit quos doloribus minus.
-
+                <p>Our residential construction division specializes in building custom homes, townhouses, and
+                    multi-family units. We offer end-to-end solutions from architectural design to final inspection,
+                    ensuring each home is crafted to meet our clients' specifications and standards of excellence.
                 </p>
-               
+
+
+
             </div>
             <div class="services-box">
 
-                <h3>Nal Jal yojana</h3>
+                <h3> Project Management
+                </h3>
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam animi libero hic obcaecati quis
-                    excepturi tenetur labore saepe! Cumque dicta rerum reiciendis quam vitae quisquam alias nihil
-                    eveniet delectus tempora!
+                <p>Effective project management is at the heart of our operations. We manage every aspect of
+                    construction projects, from initial planning and budgeting to scheduling and execution. Our goal is
+                    to ensure projects are completed on time, within budget, and to the highest standards of quality.
 
                 </p>
 
@@ -176,14 +169,13 @@
 
             <div class="services-box">
 
-                <h3>Road Construction</h3>
+                <h3>Sustainability
+                </h3>
 
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam animi libero hic obcaecati quis
-                    excepturi tenetur labore saepe! Cumque dicta rerum reiciendis quam vitae quisquam alias nihil
-                    eveniet delectus tempora!
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore incidunt consectetur suscipit.
-                    Doloremque, soluta hic architecto impedit nesciunt velit aliquid, qui illo eligendi facere vel
-                    minima, sit quos doloribus minus.
+                <p>We are committed to sustainable construction practices. Our projects incorporate eco-friendly
+                    materials and energy-efficient systems to minimize environmental impact and promote long-term
+                    sustainability.
+
                 </p>
 
             </div>
@@ -191,7 +183,7 @@
 
     </section>
 
-    <!-- products section -->
+    <!------------------------------- products section---------------------------------->
     <section class="products" id="products">
         <h2 class="heading">Latest <span>Products</span></h2>
 
@@ -200,101 +192,77 @@
 
             <!-- --------box1---------- -->
             <div class="post-box">
-                <img src="./img/main/hardware.jpg" alt="" class="post-img">
-                <h2 class="category">Build pipeline</h2>
+                <img src="./img/product/box1.jpg" alt="" class="post-img">
+                <h2 class="category">Affordable Housing Solutions </h2>
                 <a href="./html/productpop.html" class="post-title">
-                    how to create best ux design wirh adobe xd
+                    Prefab Village Homes
                 </a>
-                <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                    ratione
-                    voluptatum facilis aliquam minima. Ipsum illum similique incidunt, quo cupiditate accusamus
-                    pariatur,
-                    sint repudiandae aut temporibus, eveniet itaque officiis nam?</p>
+                <p class="post-description">Cost-effective prefabricated homes designed specifically for rural ...</p>
             </div>
 
             <!-- --------box2---------- -->
             <div class="post-box">
-                <img src="./img/main/road.jpg" alt="" class="post-img">
-                <h2 class="category">tap</h2>
+                <img src="./img/product/box2.jpg" alt="" class="post-img">
+                <h2 class="category">Infrastructure Development</h2>
                 <a href="./html/productpop.html" class="post-title">
-                    tap connection at home
+                    Community Water Systems
                 </a>
-                <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                    ratione
-                    voluptatum facilis aliquam minima. Ipsum illum similique incidunt, quo cupiditate accusamus
-                    pariatur,
-                    sint repudiandae aut temporibus, eveniet itaque officiis nam?</p>
+                <p class="post-description">Integrated water supply solutions including borehole drilling, water purification systems...</p>
             </div>
             <!-- --------box3---------- -->
             <div class="post-box">
-                <img src="./img/main/hardware.jpg" alt="" class="post-img">
-                <h2 class="category">electric</h2>
+                <img src="./img/product/box3.jpg" alt="" class="post-img">
+                <h2 class="category">Renewable Energy Solutions</h2>
                 <a href="./html/productpop.html" class="post-title">
-                    how to create best ux design wirh adobe xd
+                  Solar Power Installations
                 </a>
-                <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                    ratione
-                    voluptatum facilis aliquam minima. Ipsum illum similique incidunt, quo cupiditate accusamus
-                    pariatur,
-                    sint repudiandae aut temporibus, eveniet itaque officiis nam?</p>
+                <p class="post-description">Solar energy systems tailored for off-grid villages, providing reliable electricity for homes...</p>
             </div>
             <!-- --------box4---------- -->
             <div class="post-box">
-                <img src="./img/main/electric.jpg" alt="" class="post-img">
-                <h2 class="category">House</h2>
+                <img src="./img/product/box4.jpg" alt="" class="post-img">
+                <h2 class="category">Community Facilities</h2>
                 <a href="./html/productpop.html" class="post-title">
-                    how to create best ux design wirh adobe xd
+                    School Building Projects
                 </a>
-                <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                    ratione
-                    voluptatum facilis aliquam minima. Ipsum illum similique incidunt, quo cupiditate accusamus
-                    pariatur,
-                    sint repudiandae aut temporibus, eveniet itaque officiis nam?</p>
+                <p class="post-description">Building schools with classrooms, libraries, and computer labs, fostering education... </p>
             </div>
             <!-- --------box5---------- -->
             <div class="post-box">
-                <img src="./img/main/hardware.jpg" alt="" class="post-img">
-                <h2 class="category">home</h2>
+                <img src="./img/product/box5.jpg" alt="" class="post-img">
+                <h2 class="category">Agricultural Infrastructure</h2>
                 <a href="./html/productpop.html" class="post-title">
-                    how to create best ux design wirh adobe xd
+                    Farm Storage Facilities
                 </a>
-                <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                    ratione
-                    voluptatum facilis aliquam minima. Ipsum illum similique incidunt, quo cupiditate accusamus
-                    pariatur,
-                    sint repudiandae aut temporibus, eveniet itaque officiis nam?</p>
+                <p class="post-description">Constructing grain silos and storage warehouses to help farmers preserve their crops and manage... </p>
             </div>
             <!-- --------box6---------- -->
             <div class="post-box">
-                <img src="./img/main/pro1.jpg" alt="" class="post-img">
-                <h2 class="category">Design</h2>
+                <img src="./img/product/box6.jpg" alt="" class="post-img">
+                <h2 class="category">Health and Sanitation Improvements</h2>
                 <a href="./html/productpop.html" class="post-title">
-                    how to create best ux design wirh adobe xd
+                    Rural Health Clinics:
                 </a>
-                <p class="post-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium
-                    ratione
-                    voluptatum facilis aliquam minima. Ipsum illum similique incidunt, quo cupiditate accusamus
-                    pariatur,
-                    sint repudiandae aut temporibus, eveniet itaque officiis nam?</p>
+                <p class="post-description">Building healthcare facilities equipped with basic medical equipment...</p>
             </div>
         </div>
     </section>
 
 
-    <!-- about us section -->
-    <div class="about-content" id="about-content">
-        <h2 class="heading">ABOUT <span>Me</span></h2>
+    <!--------------------------------- about us section ---------------------------------->
+    <section class="about-content" id="about-content">
+        <h2 class="heading">ABOUT <span>Us</span></h2>
 
 
         <h4>Building Dreams, Creating Legacies</h4>
 
-        <p> Welcome to [Company Name], where craftsmanship meets commitment. Founded in [Year], we have established
+        <p> Welcome to R Sanvi Enterprise, where craftsmanship meets commitment. Founded in 2021, we have established
             ourselves as a trusted leader in the construction industry. Our journey began with a simple mission: to
             build exceptional spaces that stand the test of time and enrich the lives of those who inhabit them.</p>
 
         <h4> Who We Are</h4>
 
-        <p> At [Company Name], we are more than just builders. We are a dedicated team of architects, engineers,
+        <p> At R Sanvi Enterprise, we are more than just builders. We are a dedicated team of architects, engineers,
             project
             managers, and skilled tradespeople driven by a shared passion for excellence. Our diverse backgrounds
             and
@@ -328,13 +296,13 @@
 
 
 
-    </div>
+    </section>
 
 
-    <!-- contact section -->
+    <!-------------------------------- contact section --------------------------->
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Us</span></h2>
+        <h2 class="heading">CONTACT <span>Us</span></h2>
         <div class="form-container2">
             <form action="send_contact.php" method="post">
                 <div class="input-box">
@@ -354,7 +322,7 @@
             </form>
         </div>
         <div class="map">
-
+            <!-- -----------------contact address------------------------ -->
             <div class="contact-col">
                 <div>
                     <i class="fa fa-home"></i>
@@ -378,13 +346,10 @@
                         <p>mail us for any query</p>
                     </span>
                 </div>
-
-                <!-- <h4>ADDRESS</h4>
-            <p>Vill-rasalpur<br>
-                jandaha<br>vaishali<br>bihar<br>pincode-844505<br>email-bhjbjbj@gmail.com<br>Mobileno-5565656565</p> -->
+                <!--==========googlr map=============== -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8845.417647141243!2d85.507182!3d25.72665!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed7bd58131155b%3A0xda3aca54f9d802fb!2sJoint%20family%20house!5e1!3m2!1sen!2sin!4v1718872831724!5m2!1sen!2sin"
-                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -392,7 +357,7 @@
 
     </section>
 
-    <!-- footer section -->
+    <!---------------------------- footer section ------------------------->
     <footer class="footer">
         <div class="footer-text">
             @Copyright <a href="#"> R Sanvi Enterprise </a> 2024- All Right Reserved.
@@ -407,7 +372,7 @@
     </footer>
 
 
-    <!-- -----jqery  linl ------>
+    <!-----------------------------jqery  link ---------------------------->
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
