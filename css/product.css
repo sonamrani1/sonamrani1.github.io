@@ -17,6 +17,11 @@ body {
     font-family: 'poppins', sans-serif;
     text-transform: capitalize;
 }
+section {
+    min-height: 80vh;
+    padding: 2rem 5% 2rem;
+
+}
 
 .container {
     max-width: 1400px;
@@ -79,9 +84,9 @@ body {
 
 /* ###################product heading styling############### */
 .product-area {
-    margin-top: 13rem;
-    height: 50vh;
-    background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../img/product/producthome.jpg");
+   
+    height: 100vh;
+    background: linear-gradient(rgba(240, 240, 240, 0.144), rgba(255, 255, 255, 0.336)), url("../img/product/producthomepage.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -146,12 +151,13 @@ body {
 }
 
 .product-description .product-price {
-    color: #117964;
+    color: #258d10;
     font-weight: 700;
 }
 
 .product-description button {
-    background: #d8dade;
+    background-color:var( --button-bg-color);
+    cursor: pointer;
     padding: 4px;
     border-radius: 5px;
     font-weight: 500;
@@ -159,7 +165,7 @@ body {
 }
 
 button {
-    background: rgb(127 142 133);
+    background-color:var( --button-bg-color);
     font-size: 15px;
     padding: 5px;
     border-radius: 8px;

@@ -13,10 +13,10 @@
 }
 
 :root {
-    --bg-color: #DBA979;
-    --snd-bg-color: #E7F0DC;
+    --bg-color: #b3b3b3;
+    --button-bg-color: #1a8cff;
     --text-color: white;
-    --main-color: #59B2F4;
+    --theme-color:  #eda20c;
 }
 
 
@@ -28,18 +28,18 @@ html {
 }
 
 body {
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
     color: var(--text-color);
 }
 
 section {
     min-height: 80vh;
-    padding: 2rem 5% 2rem;
+    padding: 20rem 5% 2rem;
 
 }
 
 span {
-    color: var(--main-color);
+    color: var( --theme-color);
 }
 
 
@@ -49,6 +49,7 @@ h2 {
 }
 
 
+/* ================company logo and name==================== */
 
 .main-title {
 
@@ -63,9 +64,6 @@ h2 {
     position: fixed;
     /* box-shadow:0 0px 20px; */
     z-index: 1000;  /* tto ensure title stays on top*/
-
-
-
 }
 
 .title-text {
@@ -94,10 +92,14 @@ h1 {
     padding-left: 20px;
 }
 
+
+/* ========================navigation bar====================== */
+
 .nav-logo{
     color:white;
     font-size: 15px;
     text-transform: uppercase;
+   
 
 }
 
@@ -131,30 +133,26 @@ h1 {
     right:0;
 }
 
-
-
-
 .navbar a.active{
     border-radius: 5px;
     box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
     color: cyan;
 }
-
-
 .navbar ul {
     list-style: none;
     margin:0;
     padding: 0;
     display: flex;
-     position:relative;
-    /* top:5px; */
-  
+    justify-content: space-around;
+    align-items: center;
+
+    
 }
 
 .navbar ul li {
    
     position: relative;
-    margin-right: 15px;
+    margin-right: 10px; 
 }
 
 .navbar ul li:last-child {
@@ -166,7 +164,7 @@ h1 {
     text-decoration: none;
     padding: 10px;
     font-size: 15px;
-    display: inline-block;
+    display: block;
 
 }
 
@@ -181,53 +179,56 @@ h1 {
 
 .pro-drop {
     display: none;
+    top:100%;
     margin-top: 1px;
     opacity:0.9;
+    position: absolute;
+    width:max-content;
+    z-index: 1000;
 
 }
+.pro-drop ul {
+    flex-direction: column;
+}
+.pro-drop ul li a {
+    padding: 10px;
+    white-space: nowrap;
+}
+
+
+
 
 .navbar ul li:hover .pro-drop {
     display: block;
-    position: absolute;
-    left: 0;
-    width: 200px;
-    background-color: black;
+   
+  
+    /* /* width: 100%; */
+    background-color: black; 
 }
 
 .navbar ul li:hover .pro-drop ul {
     display: block;
-    margin: 0;
-    overflow: auto;
+    /* margin: 0;
+    overflow: auto; */
 
 }
 
 .navbar ul li:hover .pro-drop ul li {
-    width: 150px;
+    width: 100%;
     padding: 2px;
 }
 
-
+/* =======================login section======================= */
 .login-button {
-    background-color: rgb(34, 121, 202);
-    /* color: white; */
-    /* padding: 16px 20px; */
-    /* border: none; */
-    /* cursor: pointer;
-    opacity: 0.8; */
-   
-    /* position: fixed; */
-    /* bottom: 23px; */
-    /* right: 28px; */
-    /* width: 280px;  */
+    background-color:var( --button-bg-color);
   }
   
   /* The popup form - hidden by default */
-
   .login-popup {
     display: none;
     position: absolute;
     top: 65px;
-    right: -150px;
+    right: 0px;
     border: 3px solid #f1f1f1;
     z-index: 9;
   }
@@ -256,7 +257,7 @@ h1 {
   
   /* Set a style for the submit/login button */
   .form-container .btn {
-    background-color: #04AA6D;
+    background-color: var(--button-bg-color);
     color: white;
     padding: 16px 20px;
     border: none;
@@ -328,15 +329,17 @@ h1 {
     z-index: 9;
   }
 
+/* =========================hero section======================== */
 
-
-.home{
+/* .home{
     margin-top:18rem;
-}
+} */
 
 .mySlides {
     object-fit: cover;
 }
+
+
 
 .update {
     text-align: center;
@@ -358,16 +361,18 @@ h1 {
     text-align: left;
 }
 
+/* ========================service section========================= */
+
 .services {
-    background-color: var(--snd-bg-color);
+    background: var(--bg-color);
     text-align: center;
-    font-size: 25px;
+    font-size: 2.5rem;
 
 }
 
 
 .services h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -394,7 +399,7 @@ h1 {
 .services-box:hover {
     border-color: white;
     transform: scale(1.02);
-    box-shadow: 0 0 5px #33ffff, 0 0 5px #232626;
+    box-shadow: 0 0 5px var( --theme-color), 0 0 5px #232626;
 
 }
 
@@ -415,7 +420,14 @@ h1 {
 
 
 
-/* --------------------post------------ */
+/*===========================product section===================== */
+.products {
+    background: var(--bg-color);
+}
+
+.products h2 {
+    margin-bottom:1rem;
+}
 
 .post{
     display:grid;
@@ -427,7 +439,7 @@ h1 {
 
 }
 .post-box{
-    background: #9d7758;;
+    background:  #999999;
     box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
     padding:15px;
     border-radius: 0.5rem;
@@ -460,6 +472,7 @@ h1 {
     overflow: hidden;
 }
 .post-description{
+   color:#232626;
    font-size: 1.8rem;
    line-height: 2rem;
    margin:5px 0 10px;
@@ -471,7 +484,7 @@ h1 {
     
 }
 
-/* ------product pop----- */
+/* ====================product popup page==========================*/
 .post-header{
     margin-top:7rem;
     width:100%;
@@ -492,7 +505,7 @@ h1 {
 
 }
 .back-home{
-    color:blue;
+    color: var(--button-bg-color);
     font-size: 1.8rem;
 }
 
@@ -524,80 +537,9 @@ h1 {
 }
 
 
-
-
- .products {
-    background: var(--snd-bg-color);
-}
-
-.products h2 {
-    margin: 4rem 0 2rem 0;
-}
-
-.portfolio-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.portfolio-container .portfolio-box {
-   
-    position: relative;
-    border-radius: 10px;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-
-}
-
-
- .portfolio-box img{
-    height:300px;
-    width:100%;
- }
- .portfolio-box img:hover{
-    opacity:0.7;
-    
- }
- 
-
-
-
-.portfolio-layer .portfolio-box {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-} 
-
-
-
-
-.portfolio-layer h4 {
-    font-size: 3rem;
-    color: black;
-    text-align: center;
-
-}
-
-.portfolio-layer p {
-    font-size: 1.6rem;
-    margin: .3rem 0 1rem;
-    color: #161815;
-    padding:0 10px 0 10px;
-    
-} 
-
+/* ===================contact section======================== */
 .contact {
-    background-image: url("../img/main/contact2.jpg");
+    background-image: url("../img/main/contactus.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -606,7 +548,7 @@ h1 {
 
 
 .contact h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .contact form {
@@ -648,7 +590,7 @@ h1 {
     width: 100%;
     margin-top: 2rem;
     cursor: pointer;
-    background-color: #348ceb;
+    background-color:var( --button-bg-color);
     font-size: 2rem;
     border: NONE;
     border-radius: 5px;
@@ -657,7 +599,7 @@ h1 {
 }
 
 .contact form .btn:hover {
-    background-color: rgb(15, 78, 28);
+    background-color: #00b300;
 }
 
 
@@ -697,8 +639,8 @@ h1 {
 
 .map p {
     font-size:1.8rem;
-    font-weight: 300;
-    color:#3b3d3a;
+    font-weight: 400;
+    color:#181a18;
 }
 
 .map h5{
@@ -707,7 +649,7 @@ h1 {
 }
 .map .fa , .map .fa-solid{
     font-size: 25px;
-    color:#f44336;
+    color:var(--theme-color);
     margin:10px;
     margin-right: 30px;
 }
@@ -748,13 +690,13 @@ iframe{
 
 
 
-/* about section */
+/*==================== about section========================= */
 
 .heading {
     text-align: center;
     font-size: 4.5rem;
-    padding:6rem;
-    margin:3rem;
+    padding:2rem;
+    margin:1rem;
 }
 
 .about-content h2 {
@@ -799,28 +741,7 @@ iframe{
     background-color: #555;
   }
 
-
-
-/* .login-button{
-    width: 100%;
-    padding: 10px;
-    background-color: #0066cc;
-    color: #fff;
-    border:none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.login-button:hover{
-    background-color: #005bb5;
-} */
-
-
-/* media query */
-
-
+/* ========================media query============================ */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -832,7 +753,15 @@ iframe{
 
 @media(max-width:991px) {
 
-
+    /* .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    } */
 
 
      #checkbtn{
@@ -840,62 +769,58 @@ iframe{
     }
 
 
-    .header ul{
+     .navbar ul{
         position: fixed;
         width:100%;
-        height:70vh;
-        background: #1e1c1c;
+        height:75vh;
+        background: black;
         margin-top:-4rem;
         top:200px;
         right:1000px;
-        display:inline-block;
-        transition:0.5s;
-    }
-    .header ul li{
-        display: block;
-        line-height:35px;
-        margin:10px;
-        
-    } 
-
-
-    /* header {
-        padding: 20px;
-    } */
-    /* header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: black;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        
-    }  */
-    /* .header{
-        position: absolute;
+        display:flex;
         flex-direction: column;
         align-items: flex-start;
-        margin-top: -3rem;
-    } */
+        justify-content: flex-start;
+        transition: left 0.3s ease;
+        transition:0.5s;
+        opacity:0.8;
+    }  
     .navbar ul li{
         width: 100%;
+        line-height:15px;
+        margin:10px;  
         
     }
 
     .navbar ul li a{
-       font-size: 15px;
+       font-size: 12px;
+       width:23%;
         
       
     }
-     .pro-drop ul {
-        position: relative;
-        width:100%;
-        top:0;
-        left:100%;
-        background: rgb(87, 24, 24);
+    .pro-drop{
+        display: none;
+        margin-bottom: 10px;
+  
+    }
+    .pro-drop:hover .pro-drop ul {
+        display: block;
     }
    
+     .pro-drop ul {
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        position: relative;
+        min-width: auto;
+        text-align: center;
+        top:0;
+        left:100%;
+        background: black;
+    
+   
     .pro-drop ul li{
+        display: inline-block;
         width:100%;
         left:0;
     }  
@@ -943,54 +868,9 @@ iframe{
 }
 
 @media (max-width: 768px) {
-    .icon {
-        display: flex;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        z-index: 999;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-        flex-direction: row-reverse;
-    }
+   
 
-    .menu-icon {
-        display: block;
-
-    }
-
-    /* .header{
-        opacity:0.9;
-    }
-
-    .navbar ul {
-        display: flex;
-        position: relative;
-        top: 10%;
-        left: 0%;
-        background-color: black;
-        width: 40%;
-        height: 100vh;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        transition: left 0.3s ease;
-        z-index: 998;
-        padding-left: 40px;
-    }  */
- 
-    /* .navbar ul li a{
-        padding: 8px;
-        text-align: left;
-        width: 100%;
-    }
-    .pro-drop{
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .pro-drop ul {
+    /* .pro-drop ul {
         position: static;
         display: none;
         background-color: transparent;
@@ -999,34 +879,12 @@ iframe{
         border-radius: 0;
         width: 100%;
         top: initial;
-    } */
-
-    /* .pro-drop:hover .pro-drop ul {
-        display: block;
-    }
-
-
-    .pro-drop ul li{
-        padding: 10px 20px;
-    }
-
-    
-    .pro-drop:hover {
-        display: inline-block;
-    } */
-
+    }  */
    
     .services h2 {
         margin-bottom: 3rem;
     }
 
-    .portfolio h2 {
-        margin-bottom: 3rem;
-    }
-
-    .portfolio-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .form-container2 {
         width: 100%;
@@ -1039,15 +897,6 @@ iframe{
 }
 
 
-
-
-@media (max-width:617px) {
-    .portfolio-container {
-        grid-template-columns: 1fr;
-    }
-
-   
-}
 
 @media (max-width: 480px) {
     .form-container2 {
@@ -1080,4 +929,3 @@ iframe{
 
 
 }
-

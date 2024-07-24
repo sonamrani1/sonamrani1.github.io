@@ -31,6 +31,12 @@ html {
   input:checked {
     border: 7px solid rgb(48, 138, 173);
   }
+
+  p{
+    font-size: 15px;
+    text-align: right;
+    margin-right: 10rem;
+  }
   
   button,
   legend {
@@ -40,9 +46,10 @@ html {
     border-radius: 10px;
     border: 0;
     font-size: 20px;
-    text-align: center;
-
-    
+    text-align: center; 
+  }
+  button{
+    float:right;
   }
   
   button:hover,
