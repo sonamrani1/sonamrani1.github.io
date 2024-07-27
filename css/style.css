@@ -131,6 +131,8 @@ h1 {
 }
 #check:checked ~ .navbar ul{
     right:0;
+    content: '\00d7';
+
 }
 
 .navbar a.active{
@@ -868,21 +870,13 @@ iframe{
 }
 
 @media (max-width: 768px) {
-   
-
-    /* .pro-drop ul {
-        position: static;
-        display: none;
-        background-color: transparent;
-        box-shadow: none;
-        min-width: auto;
-        border-radius: 0;
-        width: 100%;
-        top: initial;
-    }  */
+    h1{
+        font-size: 3.5rem;
+        padding-left: 5px;
+    } 
    
     .services h2 {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
 
@@ -899,6 +893,21 @@ iframe{
 
 
 @media (max-width: 480px) {
+
+    h1{
+        font-size: 3.5rem;
+        padding-left: 10px;
+    } 
+    .heading {
+        font-size: 3rem;
+        padding:2rem;
+        margin:1rem;
+    }
+    .services-box h3 {
+        font-size: 2rem;
+    }
+    .services-box p {
+        font-size: 1.8rem;
     .form-container2 {
         width: 100%;
     }
