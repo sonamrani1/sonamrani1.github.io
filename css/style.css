@@ -130,9 +130,7 @@ h1 {
     display: none;
 }
 #check:checked ~ .navbar ul{
-    right:0;
-    content: '\00d7';
-
+    right:0%;
 }
 
 .navbar a.active{
@@ -753,7 +751,7 @@ iframe{
     }
 }
 
-@media(max-width:991px) {
+@media(max-width: 991px) {
 
     /* .navbar ul {
         display: none;
@@ -923,7 +921,7 @@ iframe{
 
 
 
-@media (max-width:450px) {
+@media (max-width: 450px) {
 
     .form-container2 .input-box input {
         width: 50%;
