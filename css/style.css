@@ -817,13 +817,12 @@ iframe{
         top:0;
         left:100%;
         background: black;
-    
-   
-    .pro-drop ul li{
-        display: inline-block;
-        width:100%;
-        left:0;
-    }  
+    }
+        /* .pro-drop ul li{
+            display: inline-block;
+            width:100%;
+            left:0;
+        }   */
 
     section {
         padding: 10rem 3%;
@@ -906,6 +905,7 @@ iframe{
     }
     .services-box p {
         font-size: 1.8rem;
+    }
     .form-container2 {
         width: 100%;
     }
@@ -921,6 +921,7 @@ iframe{
 
 
 
+
 @media (max-width: 450px) {
 
     .form-container2 .input-box input {
@@ -933,6 +934,4 @@ iframe{
     .map p{
         font-size: 15px;
     }
-
-
 }
