@@ -9,11 +9,9 @@ body {
 }
 
 .container {
-    width: 1000px;
-    margin-top: 20vh;
+    width: auto;
+    margin-top: 15vh;
     margin-left:0;
-   
-
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -23,7 +21,6 @@ body {
 
 .container h1 {
     color: #560bad;
-    font-size: 25px;
 }
 
 .container header {
@@ -35,10 +32,12 @@ body {
 .container header .shopping {
     position: relative;
     text-align: right;
+   
 }
 
 .shopping {
     font-size: 3rem;
+    left: -2rem;
     color: #560bad;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -50,6 +49,7 @@ body {
 
 .shopping i:hover {
     color: #6f20ca;
+
 }
 
 .shopping span {
@@ -65,25 +65,25 @@ body {
     color: #fff;
     position: absolute;
     top: -5px;
-    left: 80%;
+    left: -1rem;
     padding: 3px 10px;
 }
 
 .list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     
 }
 
 .card {
     position: fixed;
-    top: 13vh;
-    right: 100%;
+    top: 21vh;
+    right: -100%;
     width: 500px;
     background-color: #dadada;
     border-left: 1px solid #560bad;
-    height: 87vh;
+    height: 79vh;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -92,7 +92,7 @@ body {
 
 }
 
-.active .card{
+.active  .card{
     left: calc(100% - 500px)
 }
 
@@ -256,14 +256,3 @@ body {
     cursor: pointer;
 
 }
-
-
-
-
-
-
-
-
-
-
-
