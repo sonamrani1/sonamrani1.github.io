@@ -1,9 +1,9 @@
+const body = document.querySelector("body");
 const openshopping = document.querySelector(".shopping");
 const closeshopping = document.querySelector(".closeshopping");
 const list = document.querySelector(".list");
-const listcard= document.querySelector(".listcard");
+const listcard = document.querySelector(".listcard");
 const total = document.querySelector(".total");
-const body = document.querySelector(".body");
 const quantity = document.querySelector(".quantity");
 
 openshopping.addEventListener("click", () => {
@@ -77,7 +77,7 @@ const initApp = () => {
         <img src =${value.image}>
         <div class ="title">${value.name}</div>
         <div class ="price">${value.price.toLocaleString()}</div>
-        <button onclick="addtocard(${key})">Add to Card</button>
+        <button onclick="addToCard(${key})">Add to Card</button>
         `;
         list.appendChild(newdiv)
     })
@@ -86,24 +86,27 @@ const initApp = () => {
 initApp()
 
 
-const addtocard = (key) => {
+const addToCard = (key) => {
     if (listcards[key] == null) {
         listcards[key] = JSON.parse(JSON.stringify(products[key]));
         listcards[key].quantity = 1
     }
 
-    reloadcard();
+    reloadCard();
 }
 
-const reloadcard = () => {
+const reloadCard = () => {
     listcard.innerHTML = "";
-   
+
     let totalprice = 0;
+    let totalCount = 0;
+
+    total.innerText = totalprice.toLocaleString();
+    quantity.innerText = totalCount;
 
     listcards.forEach((value, key) => {
-        let count = 0;
-        totalprice = totalprice + value.price;
-        count = count + value.quantity;
+
+
 
         if (value != null) {
             let newdiv = document.createElement("li");
@@ -114,29 +117,36 @@ const reloadcard = () => {
                 </div>
 
                 <div>
-                    <button style="background-color: #560bad"  class="cardbutton" onclick = "changequantity(${key}, ${value.quantity - 1})">-</button>
-                    <div class = "count">${count}</div>
+                    <button style="background-color: #560bad"  class="cardbutton" onclick = "changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <div class = "count">${value.quantity}</div>
 
-                    <button style="background-color: #560bad" class="cardbutton" onclick =" changequantity(${key}, ${value.quantity + 1})">+</button>
+                    <button style="background-color: #560bad" class="cardbutton" onclick =" changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>
             `
             listcard.appendChild(newdiv);
         }
 
+        totalCount = totalCount + value.quantity;
+        totalprice = totalprice + value.price;
+
         total.innerText = totalprice.toLocaleString();
-        quantity.innerText = count;
+        quantity.innerText = totalCount;
 
     })
+
 }
 
-const changequantity = (key , item_quantity) => {
-    if(item_quantity==0){
+const changeQuantity = (key, item_quantity) => {
+    if (item_quantity == 0) {
         delete listcards[key]
     }
-    else{
+    else {
         listcards[key].quantity = item_quantity;
         listcards[key].price = item_quantity * products[key].price
     }
 
-    reloadcard()
+    reloadCard();
 }
+
+
+
