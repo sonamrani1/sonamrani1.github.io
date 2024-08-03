@@ -16,7 +16,7 @@
     --bg-color: #b3b3b3;
     --button-bg-color: #1a8cff;
     --text-color: white;
-    --theme-color:  #eda20c;
+    --theme-color:  #408000;
 }
 
 
@@ -60,7 +60,7 @@ h2 {
     align-items: center;
     height: 13rem;
     width: 100%;
-    background-color: #eda20c;
+    background-color: var(--theme-color);
     position: fixed;
     /* box-shadow:0 0px 20px; */
     z-index: 1000;  /* tto ensure title stays on top*/
@@ -129,18 +129,18 @@ h1 {
 #check{
     display: none;
 }
-#check:checked ~ .navbar ul{
+#check:checked ~ .nav-bar ul{
     right:0%;
 }
 
-.navbar a.active{
+.nav-bar a.active{
     border-radius: 5px;
     box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
     color: cyan;
 }
-.navbar ul {
+.nav-bar ul {
     list-style: none;
-    margin:0;
+    margin: 15px 0 15px 0;
     padding: 0;
     display: flex;
     justify-content: space-around;
@@ -149,17 +149,17 @@ h1 {
     
 }
 
-.navbar ul li {
+.nav-bar ul li {
    
     position: relative;
     margin-right: 10px; 
 }
 
-.navbar ul li:last-child {
+.nav-bar ul li:last-child {
     margin-right: 0;
 }
 
-.navbar ul li a , .login-button{
+.nav-bar ul li a , .login-button{
     color: whitesmoke;
     text-decoration: none;
     padding: 10px;
@@ -168,7 +168,7 @@ h1 {
 
 }
 
-.navbar ul li a:hover {
+.nav-bar ul li a:hover {
     border-radius: 5px;
     box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
     color: cyan;
@@ -198,7 +198,7 @@ h1 {
 
 
 
-.navbar ul li:hover .pro-drop {
+.nav-bar ul li:hover .pro-drop {
     display: block;
    
   
@@ -206,14 +206,14 @@ h1 {
     background-color: black; 
 }
 
-.navbar ul li:hover .pro-drop ul {
+.nav-bar ul li:hover .pro-drop ul {
     display: block;
     /* margin: 0;
     overflow: auto; */
 
 }
 
-.navbar ul li:hover .pro-drop ul li {
+.nav-bar ul li:hover .pro-drop ul li {
     width: 100%;
     padding: 2px;
 }
@@ -299,9 +299,11 @@ h1 {
     color:#162938;
     text-decoration: none;
 }
+
 .forgot-btn:hover{
     text-decoration: underline;
 }
+
 
 .login-register{
     font-size: 1.5rem;
@@ -337,6 +339,7 @@ h1 {
 
 .mySlides {
     object-fit: cover;
+    
 }
 
 
@@ -486,10 +489,10 @@ h1 {
 
 /* ====================product popup page==========================*/
 .post-header{
-    margin-top:7rem;
+    margin-top:3rem;
     width:100%;
-    height:500px;
-    background-color: rgb(43, 41, 41);
+    height:200px;
+    background-color: var(--theme-color);
 }
 .post-container{
     max-width: 800px;
@@ -501,7 +504,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:18rem !important ;
+    margin-top:1rem !important ;
 
 }
 .back-home{
@@ -523,7 +526,7 @@ h1 {
     object-position: center;
 }
 .post-content{
-    margin-top: 20rem !important;
+    margin-top: 1rem !important;
 }
 .sub-heading{
     font-size: 2.2rem;
@@ -623,7 +626,8 @@ h1 {
 .form-container2 {
     width: 60%;
     padding: 20px;
-    position: -webkit-sticky;
+    /* position: -webkit-sticky; */
+    position: relative;
     top: 20px;
     left: 20px;
 }
@@ -662,7 +666,7 @@ iframe{
     padding: 2rem;
     width: 100%;
     background-color: black;
-    color: #eda20c;
+    color: var(--theme-color);
     text-align: center;
 }
 .footer-text a{
@@ -678,7 +682,7 @@ iframe{
 }
 .social .fa-brands{
     font-size: 2rem;
-    color:#eda20c;
+    color:var(--theme-color);
 }
 .social .fa-brands:hover{
     color:green;
@@ -730,7 +734,7 @@ iframe{
     font-size: 18px;
     border: none;
     outline: none;
-    background-color:#eda20c;
+    background-color:var(--theme-color);
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -753,7 +757,7 @@ iframe{
 
 @media(max-width: 991px) {
 
-    /* .navbar ul {
+    /* .nav-bar ul {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -769,7 +773,7 @@ iframe{
     }
 
 
-     .navbar ul{
+     .nav-bar ul{
         position: fixed;
         width:100%;
         height:75vh;
@@ -785,14 +789,14 @@ iframe{
         transition:0.5s;
         opacity:0.8;
     }  
-    .navbar ul li{
+    .nav-bar ul li{
         width: 100%;
         line-height:15px;
         margin:10px;  
         
     }
 
-    .navbar ul li a{
+    .nav-bar ul li a{
        font-size: 12px;
        width:23%;
         

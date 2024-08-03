@@ -11,8 +11,11 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) { myIndex = 1 }
   x[myIndex - 1].style.display = "block";
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 5000); // Change image every 2 seconds
 }
+
+
+
 
 
 
@@ -53,13 +56,33 @@ function closeForm() {
 
 // ============================show password =================
 function myFunction() {
-  var x = document.getElementById("myInput");
+  var x = document.getElementById("password");
   if (x.type === "password") {
     x.type = "text";
   } else {
     x.type = "password";
   }
 }
+
+
+
+
+// ===========================check login form is filled==========================
+
+function checkEmailAndPasswordBeforeRedirect() {
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (email === "" || password === "") {
+    alert("Please fill in both email and password fields.");
+  } else if (!emailRegex.test(email)) {
+    alert("Invalid email address.");
+  } else {
+    window.location.href = '../html/dash.html';
+  }
+}
+
 
 
 // ================highlight particular section on click===================

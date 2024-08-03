@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         .mySlides {
             display: none;
@@ -39,7 +41,7 @@
         <input type="checkbox" id="check" name="" value="">
         <label for="check" id="checkbtn"><i class="fa-solid fa-bars"></i></label>
         <label class="nav-logo">RSE</label>
-        <nav class="navbar">
+        <nav class="nav-bar">
             <ul>
                 <li><a href="#home" class="active">HOME</a></li>
                 <li><a href="#services" class="smooth-scroll" target="_self">SERVICES <i class="fa-solid fa-angle-down"></i></a>
@@ -85,16 +87,17 @@
                         <h1>Login</h1>
 
                         <label for="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
                         <label for="psw"><b>Password</b></label>
-                        <input type="password" placeholder="Enter Password" name="psw" id="myInput" required>
-                        /* An element to toggle between password visibility */
-                        <input type="checkbox" onclick="myFunction()">Show Password
-
-                        <div class="forgot-btn"><a href="#">Forget Password</a></div>
-
-                        <button type="submit" class="btn">Login</button>
+                        <input type="password" placeholder="Enter Password" name="psw" id="password" required>
+                        <!-- /* An element to toggle between password visibility */ -->
+                       
+                        <div class="forgot-btn"><a href="#">Forget Password</a><input type="checkbox" onclick="myFunction()">Show Password</div>
+                        
+                        
+                        <button type="button" class="btn" onclick="checkEmailAndPasswordBeforeRedirect()">Login</button>
+                        
                         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                         <div class="login-register">
                             <p>Don't have an account?<a href="./html/registerpage.html"
@@ -117,6 +120,56 @@
 
     <!---------------------------- home screen -------------------------------->
     <section class="home" id="home">
+    <div class="container"> 
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="./img/main/cont10.jpg" alt="Los Angeles" style="width:100%; height:450px;">
+            </div>
+      
+            <div class="item">
+              <img src="./img/main/cont9.jpg" alt="Chicago" style="width:100%; height:450px;">
+            </div>
+          
+            <div class="item">
+              <img src="./img/main/cont6.jpg" alt="New york" style="width:100%; height:450px;">
+            </div>
+            <div class="item">
+                <img src="./img/main/cont7.jpg" alt="Chicago" style="width:100%; height:450px;">
+              </div>
+
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="update">
+        <h2>LATEST UPDATES</h2>
+        <p>No updates till now</p>
+
+
+    </div>
+
+</section>
+
+    <!-- <section class="home" id="home">
 
         <div class="slides" style="max-width:100%">
             <img class="mySlides" src="./img/main/cont1.jpg" style="width:100%" height="500px">
@@ -131,7 +184,7 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
 
     <!--------------------------- service section ------------------------------->

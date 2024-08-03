@@ -1,0 +1,285 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  :root {
+    --bg-color: #b3b3b3;
+    --button-bg-color: #1a8cff;
+    --text-color: white;
+    --theme-color:  #eda20c;
+}
+  
+  header {
+    background-color: var(--theme-color);
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  header nav i{
+   padding:5px;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: block;
+   
+  }
+  
+  section {
+    background-color: var(--bg-color);
+    padding: 1rem;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1, h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+  h3 {
+    font-size: 16px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #337ab7;
+  }
+  
+  a:hover {
+    color: #23527c;
+  }
+  
+  /* Welcome Section */
+  
+  .welcome {
+    background-color: rgb(47, 156, 71);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .welcome h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  /* Overview Section */
+  
+  .overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 21%;
+    margin-left: 1%;
+    padding:8rem 1rem 8rem 0;
+    border: 2px solid black;
+    background-color: rgb(156, 126, 69);
+
+    
+  }
+  
+  .overview ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .overview li {
+    margin-bottom: 20px;
+  }
+  
+  .overview span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Recent Activity Section */
+  
+  .recent-activity {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:400px;
+    width:300px;
+    background-color: #d1ba38;
+    float:right;
+    
+     }
+  
+  .recent-activity ul {
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recent-activity li {
+    margin-bottom: 25px;
+  }
+  
+  .recent-activity span {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Quick Links Section */
+  
+  .quick-links {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:300px;
+    width:300px;
+    background-color: #d1ba38;
+    float:right;
+  }
+  
+  .quick-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .quick-links li {
+    margin-bottom: 20px;
+  }
+  
+  .quick-links a {
+    font-size: 15px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Statistics Section */
+  
+  .statistics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 21%;
+  }
+  
+  .statistics ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .statistics li {
+    margin-bottom: 20px;
+  }
+  
+  .statistics span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Notifications Section */
+  
+  .notifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .notifications ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .notifications li {
+    margin-bottom: 20px;
+  }
+  
+  .notifications span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+
+  /* Add some basic styling to the chart container */
+.chart-container {
+    width: 1200px;
+    height: 600px;
+    border: 2px solid #141313;
+    padding: 100px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add some basic styling to the canvas element */
+  #bar-chart {
+    width: 100%;
+    height: 100%;
+  }
