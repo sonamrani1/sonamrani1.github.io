@@ -44,11 +44,11 @@ function topFunction() {
 
 // =========================login popup=============================
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("loginForm").style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById("loginForm").style.display = "none";
 }
 
 
@@ -82,6 +82,30 @@ function checkEmailAndPasswordBeforeRedirect() {
     window.location.href = '../html/dash.html';
   }
 }
+
+
+document.getElementById('loginForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  
+  const response = await fetch('/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+  });
+  
+  const result = await response.json();
+  document.getElementById('message').textContent = result.message;
+  
+  if (response.ok) {
+      window.location.href = '../html/dash.html';
+  }
+});
+
+
+
 
 
 

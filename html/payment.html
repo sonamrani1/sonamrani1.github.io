@@ -1,38 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>payment page</title>
-    <link rel="stylesheet" href="../css/payment.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>payment page</title>
+  <link rel="stylesheet" href="../css/payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
 </head>
+
 <body>
-    <form id="paymentForm">
-        <fieldset>
-          <legend>Please select your preferred payment method:</legend>
-          <div>
-            <input type="radio" name="payment" value="PayTm"  id ="paymentProviderId" data-url="https://paytm.com/">
-            <label>PayTm</label>
-      
-            <input type="radio" name="payment" value="Airpay"  id ="paymentProviderId"  data-url="https://airpay.co.in/" >
-            <label>Airpay</label>
-      
-            <input type="radio" name="payment" value="Razorpay"  id ="paymentProviderId" data-url="https://rzp.io/l/pgxfRlQ5">
-            <label>Razorpay</label>
-          </div>
-          <!-- <p>Total Amount: $<span id="payment-total"></span></p> -->
-          <!-- <input type="hidden" id="totalamount" name="totalamount" value="0.00"> -->
-          <p class="total" >Total Price: <span id="totalprice">0</span></p>
+
+  
+  <div class="main-title">
+    <div class="logo">
+      <img src="../img/main/ganpati-logo.jpg" alt="">
+    </div>
+    <div class="title-text">
+      <p class="company-name">R Sanvi Enterprise</p>
+      </div>
+  </div>
 
 
-          <div>
-            <button type="submit">Proceed to Pay</button>
-          </div>
-        
-        </fieldset>
-      </form>
-      <script src="../js/payment.js"></script>
-      <script src="../js/cart.js"></script>
+
+<section>
+  <form id="paymentForm">
+    <fieldset>
+      <legend>Please select your preferred payment method:</legend>
+      <div>
+        <input type="radio" name="payment" value="PayTm" id="paymentProviderId" data-url="https://paytm.com/">
+        <label>PayTm</label>
+
+        <input type="radio" name="payment" value="Airpay" id="paymentProviderId" data-url="https://airpay.co.in/">
+        <label>Airpay</label>
+
+        <input type="radio" name="payment" value="Razorpay" id="paymentProviderId" data-url="https://rzp.io/l/pgxfRlQ5">
+        <label>Razorpay</label>
+      </div>
+      <div>
+        <span>Total Price: <span id="totalPrice">$0.00</span></span>
+      </div>
+
+      <div>
+        <button type="submit">Proceed to Pay</button>
+      </div>
+
+    </fieldset>
+  </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-text">
+      @Copyright <a href="#"> R Sanvi Enterprise </a> 2024- All Right Reserved.
+    </div>
+    <div class="social">
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+
+  </footer>
+
+
+
+  <script src="../js/payment.js"></script>
+  <script src="../js/shopping.js"></script>
 
 </body>
+
 </html>

@@ -67,3 +67,20 @@ new Chart("myChart", {
 
 
 
+
+document.getElementById('logoutButton').addEventListener('click', async () => {
+  const response = await fetch('/logout', {
+      method: 'POST'
+  });
+  
+  const result = await response.json();
+  document.getElementById('message').textContent = result.message;
+  
+  if (response.ok) {
+      window.location.href = '/login.html';
+  }
+});
+
+
+
+

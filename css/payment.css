@@ -1,64 +1,257 @@
-html {
-    font-family: sans-serif;
-  }
-  
-  div:first-of-type {
-    display: grid;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  
-  label {
-    margin-left: 35px;
-    line-height: 25px;
-  }
-  
-  input {
-    appearance: none;
-  
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-  
-    border: 2px solid black;
-    transition: 0.2s all linear;
-    margin-right: 5px;
-  
-    position: relative;
-    top: 21px;
-  }
-  
-  input:checked {
-    border: 7px solid rgb(48, 138, 173);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-  p{
-    font-size: 15px;
-    text-align: right;
-    margin-right: 10rem;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 80vh;
+  padding: 20rem 5% 2rem;
+
+}
+
+
+
+/* ================company logo and name==================== */
+
+.main-title {
+
+  display: flex;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 100%;
+  /* background-color: #408000; */
+  background: linear-gradient(to right, green, orange);
   
-  button,
-  legend {
-    color: white;
-    background-color: rgb(36, 151, 74);
-    padding: 12px 25px;
-    border-radius: 10px;
-    border: 0;
-    font-size: 20px;
-    text-align: center; 
+  position: fixed;
+  box-shadow:0 0px 20px;
+  z-index: 1000;
+  /* tto ensure title stays on top*/
+}
+
+.title-text {
+  flex: 60%;
+  padding: 1rem;
+  text-align: left;
+
+}
+
+.logo {
+  flex: 40%;
+  justify-content: left;
+  align-items: left;
+
+}
+
+.logo img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 8px;
+  box-shadow: -4px -4px 8px #000, 4px 4px 6px #000
+}
+
+.company-name {
+  background-color: black;
+  /* background: linear-gradient(to right, rgb(95, 22, 22), blue); */
+  background-clip: text;
+  color: transparent;
+  font-size: 5rem;
+  padding-left: 20px;
+  font-weight: 500;
+}
+
+/* ========================footer section====================== */
+
+.footer {
+  font-size: 1.2rem;
+  padding: 2rem;
+  width: 100%;
+  background-color: black;
+  color: #408000;
+  text-align: center;
+}
+
+.footer-text a {
+  color: white;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2rem;
+  margin: 1rem;
+}
+
+.social .fa-brands {
+  font-size: 2rem;
+  color: var(--theme-color);
+}
+
+.social .fa-brands:hover {
+  color: green;
+  transition: 0.5s all linear;
+}
+
+
+
+
+ #paymentForm div:first-of-type {
+  display: grid;
+ 
+  align-items: center;
+ 
+  margin:20px 0 10px 50px;
+  
+
+}
+ 
+
+#paymentForm {
+  background-color: #999999;
+  height:400px;
+  border-radius: 10px;
+}
+
+fieldset{
+  height:400px;
+}
+
+label {
+  margin-left: 35px;
+  line-height: 25px;
+  font-size: 15px;
+}
+
+input {
+  appearance: none;
+
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid black;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 21px;
+}
+
+input:checked {
+  border: 7px solid #1a8cff;
+}
+
+
+
+button,
+legend {
+  color: white;
+  background: linear-gradient(to right, green, orange);
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+button {
+  float: right;
+  margin-top: 3rem;
+}
+
+button:hover,
+button:focus {
+  background-color: #1a8cff;
+}
+
+button:active {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+}
+
+
+span{
+ display: flex;
+ justify-content: right;
+ margin:20px;
+ font-size: 15px;
+}
+
+
+
+
+
+@media(max-width: 991px) {
+  section {
+    padding: 10rem 3%;
+}
+.footer {
+  padding: 2rem 3%;
+}
+.main-title {
+  height: 13rem;
+
+}
+
+.company-name {
+  font-size: 3rem;
+  padding-left: 10px;
+}
+
+.logo img {
+  height: 80px;
+  width: 80px;
+}
+#paymentForm{
+  margin-top: 8rem;
+}
+
+
+}
+
+@media (max-width: 768px) {
+  .company-name {
+    font-size: 3.5rem;
+    padding-left: 5px;
+}
+}
+
+@media (max-width: 480px) {
+
+  .company-name {
+      font-size: 3.5rem;
+      padding-left: 10px;
   }
   button{
-    float:right;
+      margin-top: 0;
+  }
+  legend,button{
+    font-size: 15px;
   }
   
-  button:hover,
-  button:focus {
-    background-color: #0d6597;
-  }
-  
-  button:active {
-    background-color: white;
-    color: black;
-    outline: 1px solid black;
-  }
+}
+
