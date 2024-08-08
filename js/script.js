@@ -11,8 +11,11 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) { myIndex = 1 }
   x[myIndex - 1].style.display = "block";
-  setTimeout(carousel, 2000); // Change image every 2 seconds
+  setTimeout(carousel, 5000); // Change image every 2 seconds
 }
+
+
+
 
 
 
@@ -41,11 +44,11 @@ function topFunction() {
 
 // =========================login popup=============================
 function openForm() {
-  document.getElementById("myForm").style.display = "block";
+  document.getElementById("loginForm").style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  document.getElementById("loginForm").style.display = "none";
 }
 
 
@@ -53,13 +56,57 @@ function closeForm() {
 
 // ============================show password =================
 function myFunction() {
-  var x = document.getElementById("myInput");
+  var x = document.getElementById("password");
   if (x.type === "password") {
     x.type = "text";
   } else {
     x.type = "password";
   }
 }
+
+
+
+
+// ===========================check login form is filled==========================
+
+function checkEmailAndPasswordBeforeRedirect() {
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  if (email === "" || password === "") {
+    alert("Please fill in both email and password fields.");
+  } else if (!emailRegex.test(email)) {
+    alert("Invalid email address.");
+  } else {
+    window.location.href = '../html/dash.html';
+  }
+}
+
+
+document.getElementById('loginForm').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  
+  const response = await fetch('/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password })
+  });
+  
+  const result = await response.json();
+  document.getElementById('message').textContent = result.message;
+  
+  if (response.ok) {
+      window.location.href = '../html/dash.html';
+  }
+});
+
+
+
+
 
 
 // ================highlight particular section on click===================

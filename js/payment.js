@@ -11,3 +11,19 @@ document.getElementById('paymentForm').addEventListener('submit', (event) => {
     }
   });
   
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Retrieve totalPrice from localStorage
+    const totalPrice = localStorage.getItem('totalPrice');
+
+    // Display the totalPrice on the payment page
+    const totalPriceElement = document.getElementById('totalPrice');
+    if (totalPriceElement && totalPrice) {
+        totalPriceElement.textContent = `$${totalPrice}`;
+    }
+
+    // Clear the totalPrice from localStorage if it's a one-time use
+     localStorage.removeItem('totalPrice');
+});

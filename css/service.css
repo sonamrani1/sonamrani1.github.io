@@ -73,13 +73,14 @@ section {
 
 }
 
-h1 {
-
+.company-name {
+    background: linear-gradient(to right, rgb(95, 22, 22), blue);
+    background-clip: text;
+    color: transparent;
     font-size: 5rem;
     padding-left: 20px;
+    font-weight: 500;
 }
-
-
 
 
 

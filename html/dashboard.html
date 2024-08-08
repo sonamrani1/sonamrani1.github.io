@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Account</a><i class="fa-solid fa-user"></i></li>
+                <li><a href="#">Notification</a><i class="fa-solid fa-bell"></i></li>
+                <li><a href="#">Setting</a><i class="fa-solid fa-gear"></i></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="welcome">
+            <h1>Welcome, [Sonam Rani]!</h1>
+            <p>Here's an overview of your account and recent activity.</p>
+        </section>
+        <div class="quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#" class="place-order">Place an Order</a></li>
+                <li><a href="#" class="manage-products">Manage Products</a></li>
+                <li><a href="#" class="view-order-history">View Order History</a></li>
+                <li><a href="#" class="edit-profile">Edit Profile</a></li>
+            </ul>
+        </div>
+        <div class="overview">
+            <h2>Overview</h2>
+            <ul>
+                <li>
+                    <span>Account Balance:</span>
+                    <span>$100.00</span>
+                </li>
+                <li>
+                    <span>Number of Orders:</span>
+                    <span>5</span>
+                </li>
+                <li>
+                    <span>Number of Products:</span>
+                    <span>10</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="recent-activity">
+            <h2>Recent Activity</h2>
+            <ul>
+                <li>
+                    <span>Order #1234:</span>
+                    <span>Placed on March 12, 2023</span>
+                    <a href="#" class="view-details">View Details</a>
+                </li>
+                <li>
+                    <span>Product Update:</span>
+                    <span>"Product A" was updated on March 10, 2023</span>
+                    <a href="#" class="view-product">View Product</a>
+                </li>
+                <li>
+                    <span>Login History:</span>
+                    <span>Last login was on March 12, 2023 at 10:45 AM</span>
+                    <a href="#" class="view-login-history">View Login History</a>
+                </li>
+            </ul>
+        </div>
+<!--        
+        <section class="statistics">
+            <h2>Statistics</h2>
+            <h3>Top 5 Products:</h3>
+            <ul>
+                <li>
+                    <span>1. Product A</span>
+                    <span>(10 sales)</span>
+                </li>
+                <li>
+                    <span>2. Product B</span>
+                    <span>(8 sales)</span>
+                </li>
+                <li>
+                    <span>3. Product C</span>
+                    <span>(6 sales)</span>
+                </li>
+                <li>
+                    <span>4. Product D</span>
+                    <span>(4 sales)</span>
+                </li>
+                <li>
+                    <span>5. Product E</span>
+                    <span>(2 sales)</span>
+                </li>
+            </ul>
+            <h3>Sales by Category:</h3>
+            <ul>
+                <li>
+                    <span>Category A:</span>
+                    <span>$500.00</span>
+                </li>
+                <li>
+                    <span>Category B:</span>
+                    <span>$300.00</span>
+                </li>
+                <li>
+                    <span>Category C:</span>
+                    <span>$200.00</span>
+                </li>
+            </ul>
+        </section> -->
+
+
+
+        <!-- Create a container for the chart -->
+<div class="chart-container">
+    <!-- Create a canvas element for the chart -->
+    <canvas id="bar-chart" width="400" height="200"></canvas>
+  </div>
+
+
+        <!-- <section class="notifications">
+            <h2>Notifications</h2>
+            <ul>
+                <li>
+                    <span>New Order:</span>
+                    <span>Order #1234 was placed on March 12, 2023</span>
+                    <a href="#" class="view-order">View Order</a>
+                </li>
+                <li>
+                    <span>Product Low Stock:</span>
+                    <span>Product A is running low on stock</span>
+                    <a href="#" class="view-product">View Product</a> -->
+
+<script src="../js/dashboard.js"></script>
+</body>
+
+</html>
